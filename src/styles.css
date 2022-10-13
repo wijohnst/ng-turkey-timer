@@ -1,4 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Shrikhand&family=Tenor+Sans&display=swap');
+
+html, body { 
+	height: 100%; 
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+	--tt-grayblue: #264653;
+	--tt-teal: #2A9D8F;
+	--tt-yellow: #E9C46A;
+	--tt-orange: #F4A261;
+	--tt-red: #E76F51;
+
+	--tt-yellow-orange-gradiant: linear-gradient(166.58deg, #E9C46A 2.24%, #F4A261 46.36%, #E76F51 97.92%);
+	--tt-teal-yellow-gradiant: linear-gradient(166.58deg, #2A9D8F 2.24%, #E9C46A 97.92%);
+	--tt-red-blue-gradiant: linear-gradient(178.99deg, #264653 -6.02%, #E76F51 72.45%);
+
+	--tt-text-shadow: 0px 4px 4px rgba(0,0,0,.25);
+}
+
+body { 
+	font-family: "Chivo", sans-serif; 
+	font-size: 18pt;
+	background: var(--tt-yellow-orange-gradiant);
+}
+
+h1 {
+	font-family: "Shrikhand", cursive;
+	font-size: 2em;
+	letter-spacing: .02em;
+	text-shadow: var(--tt-text-shadow);
+	color: white;
+}
+
+h2 {
+	font-family: "Tenor Sans", sans-serif;
+	font-size: 1.5em;
+}
