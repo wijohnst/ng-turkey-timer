@@ -13,6 +13,7 @@ html, body {
 	--tt-yellow: #E9C46A;
 	--tt-orange: #F4A261;
 	--tt-red: #E76F51;
+	--tt-white: #fff;
 
 	--tt-yellow-orange-gradiant: linear-gradient(166.58deg, #E9C46A 2.24%, #F4A261 46.36%, #E76F51 97.92%);
 	--tt-teal-yellow-gradiant: linear-gradient(166.58deg, #2A9D8F 2.24%, #E9C46A 97.92%);
@@ -21,9 +22,9 @@ html, body {
 	--tt-text-shadow: 0px 4px 4px rgba(0,0,0,.25);
 }
 
-@keyframes ColorAnimation {
-	from { background-color: red;}
-	to { background-color: blue;}
+@keyframes FadeIn {
+	0% { opacity: 0%;}
+	100% { opacity: 100%;}
 }
 
 @keyframes FallingLeaf {
@@ -50,6 +51,7 @@ body {
 	font-family: "Chivo", sans-serif; 
 	font-size: 18pt;
 	background: var(--tt-yellow-orange-gradiant);
+	font-weight: 300;
 }
 
 h1 {
