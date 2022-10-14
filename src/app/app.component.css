@@ -6,3 +6,11 @@
 	height: 100%;
 	width: 100%;
 }
+
+.animate {
+	color: red;
+
+	animation-name: FallingLeaf;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+}
