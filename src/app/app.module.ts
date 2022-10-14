@@ -6,9 +6,10 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { MatSliderModule } from "@angular/material";
+import { TtheaderComponent } from "./ttheader/ttheader.component";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TtheaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
