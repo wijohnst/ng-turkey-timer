@@ -7,8 +7,10 @@
 	width: 100%;
 }
 
-.wreath-wrapper{
-	display: flex;
-	flex-flow: column nowrap;
-	padding: .5em;
+.animate {
+	color: red;
+
+	animation-name: FallingLeaf;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
 }

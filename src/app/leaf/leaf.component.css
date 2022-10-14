@@ -1,3 +1,5 @@
 .leaf-wrapper {
-	/* border: solid thin black; */
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	/* animation-name: FallingLeaf; */
 }

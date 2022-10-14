@@ -18,7 +18,6 @@
 	position: relative;
 	top: -1.5em;
 	left: .5em;
-	/* background-color: lightblue; */
 }
 
 .row-four{
@@ -31,5 +30,15 @@
 	position: relative;
 	top: -3em;
 	left: -.5em;
+}
+
+.animate {
+	opacity: 0%;
+	position: absolute;
+	bottom: 50%;
+	animation-name: FallingLeaf;
+	animation-duration: 7s;
+	animation-delay: 5s;
+	animation-iteration-count: infinite;
 }
 
