@@ -18,7 +18,8 @@ export class LeafComponent implements OnInit {
   @Input() rotationDegree: string;
 
   imagePath: string = "";
-  dynamicStyle;
+  rotation;
+  wrapperSize;
 
   ngOnInit() {
     this.getImagePath();
@@ -43,6 +44,9 @@ export class LeafComponent implements OnInit {
   }
 
   getDynamicStyle() {
-    this.dynamicStyle = { transform: `rotate(${this.rotationDegree}deg)` };
+    this.rotation = { transform: `rotate(${this.rotationDegree}deg)` };
+    this.wrapperSize = {
+      width: "40px",
+    };
   }
 }

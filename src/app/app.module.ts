@@ -8,9 +8,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatSliderModule } from "@angular/material";
 import { TtheaderComponent } from "./ttheader/ttheader.component";
 import { LeafComponent } from './leaf/leaf.component';
+import { LeafwreathComponent } from './leafwreath/leafwreath.component';
 
 @NgModule({
-  declarations: [AppComponent, TtheaderComponent, LeafComponent],
+  declarations: [AppComponent, TtheaderComponent, LeafComponent, LeafwreathComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

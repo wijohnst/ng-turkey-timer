@@ -1,0 +1,35 @@
+.leaf-wreath-wrapper{
+}
+
+.wreath-row {
+	display: flex;
+}
+
+.row-one{
+}
+
+.row-two{
+	position: relative;
+	top: -.75em;
+	right: .1em;
+}
+
+.row-three{
+	position: relative;
+	top: -1.5em;
+	left: .5em;
+	/* background-color: lightblue; */
+}
+
+.row-four{
+	position: relative;
+	top: -2.25em;
+	left: .1em;
+}
+
+.row-five{
+	position: relative;
+	top: -3em;
+	left: -.5em;
+}
+
