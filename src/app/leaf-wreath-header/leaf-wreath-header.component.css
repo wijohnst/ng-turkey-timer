@@ -1,0 +1,18 @@
+.wreath-wrapper{
+	position: relative;
+	top: 4em;
+}
+
+.header-wrapper{
+	position: relative;
+	top: -3.5em;
+}
+
+.subheader-wrapper{
+	position: relative;
+	top: -5.5em;
+	text-align: center;
+	color: white;
+	text-shadow: var(--tt-text-shadow);
+}
+

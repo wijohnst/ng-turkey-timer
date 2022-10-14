@@ -1,4 +1,5 @@
 .leaf-wrapper {
-	height: 98px;
-	width: 49px;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	/* animation-name: FallingLeaf; */
 }
