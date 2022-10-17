@@ -1,0 +1,71 @@
+<div class="form-component-wrapper">
+  <div class="form-controls-wrapper">
+    <div class="form-group">
+      <h1>Add your meal</h1>
+      <mat-form-field class="form-item">
+        <mat-label>Meal Date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [(ngModel)]="model.serviceDate"
+        />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="form-item">
+        <mat-label>Service Time</mat-label>
+        <input matInput [(ngModel)]="model.serviceTime" />
+        <mat-hint>2:30 PM</mat-hint>
+      </mat-form-field>
+      <div class="recipes-wrapper" *ngFor="let recipe of model.recipes">
+        <mat-form-field>
+          <mat-label>Recipe Name</mat-label>
+          <input matInput [(ngModel)]="recipe.name" />
+        </mat-form-field>
+        <label>Lead Time</label>
+        <mat-form-field class="duration">
+          <mat-label>Hours</mat-label>
+          <input matInput type="number" [(ngModel)]="recipe.leadTime.hours" />
+        </mat-form-field>
+        <label>Prep Time</label>
+        <div class="recipe-duration">
+          <mat-form-field class="duration">
+            <mat-label>Hours</mat-label>
+            <input matInput type="number" [(ngModel)]="recipe.prepTime.hours" />
+          </mat-form-field>
+          <mat-form-field class="duration">
+            <mat-label>Minutes</mat-label>
+            <input
+              matInput
+              type="number"
+              [(ngModel)]="recipe.prepTime.minutes"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div [ngClass]="['add-recipe-text']">
+      <span *ngIf="model.recipes.length === 0">
+        You haven't addeded any recipes. Click "Add Recipe" below to get
+        started.
+      </span>
+    </div>
+  </div>
+</div>
+<div class="add-meal-controls">
+  <button
+    mat-raised-button
+    (click)="addRecipe()"
+    [ngClass]="['form-button', 'form-item']"
+  >
+    Add Recipe
+  </button>
+  <button
+    *ngIf="model.recipes.length > 0"
+    mat-raised-button
+    (click)="submitMeal()"
+  >
+    Submit Meal
+  </button>
+</div>
