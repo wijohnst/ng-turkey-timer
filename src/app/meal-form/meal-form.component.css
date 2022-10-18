@@ -1,0 +1,86 @@
+.form-component-wrapper{
+	width: 500px;
+}
+
+.recipe-duration{
+	display: flex;
+	flex-flow: row;
+}
+
+@media screen and (max-width: 500px){
+	.form-component-wrapper{
+		max-width: 400px;
+	}
+
+	.add-recipe-text{
+		margin: 0 .25em 0 .25em;
+	}
+
+	.recipe-duration{
+		flex-flow: column;
+	}
+}
+
+.form-controls-wrapper{
+	flex: 1 0 auto;
+}
+
+.form-group {
+	display: flex;
+	flex-flow: column;
+	padding: 1em;
+}
+
+.form-item{
+	margin: 0 0 1em 0;
+}
+
+.recipes-wrapper{
+	display: flex;
+	flex-flow: column;
+	/* padding: .25em; */
+	border-radius: 5px;
+	margin: .5em 0 .5em 0;
+	/* overflow: hidden; */
+}
+
+.duration{
+	margin: 0 0 0 .25em;
+	flex-grow: 1;
+}
+
+.form-button{
+	max-width: 50%;
+	margin: .5em 2em .25em 2em;
+}
+
+.add-meal-controls{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.add-recipe-text{
+	text-align: center;
+}
+
+.alert-text{
+	font-size: 1rem;
+}
+
+.click-icon{
+	cursor: pointer;
+}
+
+.input-tooltip-wrapper{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.chips-list-wrapper{
+	/* background-color: lightgreen; */
+	width: 100%;
+}

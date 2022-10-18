@@ -3,13 +3,13 @@
 	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
-	width: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	/* overflow-x: scroll; */
+	background: var(--tt-yellow-orange-gradiant);
 }
 
 .animate {
-	color: red;
-
 	animation-name: FallingLeaf;
 	animation-iteration-count: infinite;
 	animation-duration: 5s;
