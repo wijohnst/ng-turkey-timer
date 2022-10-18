@@ -1,12 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Shrikhand&family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&family=Shrikhand&family=Tenor+Sans&display=swap');
 
-html, body { 
-	height: 100%; 
-	padding: 0;
+* {
 	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
+}
+html, body { 
+	height: 100%;
+	overflow: scroll;
+
+	font-family: "Chivo", sans-serif; 
+	font-size: 18pt;
+	font-weight: 300;
+
 
 	--tt-grayblue: #264653;
 	--tt-teal: #2A9D8F;
@@ -15,12 +23,18 @@ html, body {
 	--tt-red: #E76F51;
 	--tt-white: #fff;
 
-	--tt-yellow-orange-gradiant: linear-gradient(166.58deg, #E9C46A 2.24%, #F4A261 46.36%, #E76F51 97.92%);
+	--ng-mat-gray-brown: #6F4E2E;
+
+	--tt-yellow-orange-gradiant: linear-gradient(166.58deg, #E9C46A 2.24%, #F4A261 46.36%, #E76F51 100%);
 	--tt-teal-yellow-gradiant: linear-gradient(166.58deg, #2A9D8F 2.24%, #E9C46A 97.92%);
 	--tt-red-blue-gradiant: linear-gradient(178.99deg, #264653 -6.02%, #E76F51 72.45%);
 	--tt-gray-white-gradiant: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0) 100%);
 	
 	--tt-text-shadow: 0px 4px 4px rgba(0,0,0,.25);
+}
+
+body {
+	min-height: 100vh;
 }
 
 @keyframes FadeIn {
@@ -48,14 +62,6 @@ html, body {
 	}
 }
 
-body { 
-	font-family: "Chivo", sans-serif; 
-	font-size: 18pt;
-	background: var(--tt-yellow-orange-gradiant);
-	background-color: black;
-	font-weight: 300;
-}
-
 h1 {
 	font-family: "Shrikhand", cursive;
 	font-size: 2em;
@@ -68,4 +74,11 @@ h1 {
 h2 {
 	font-family: "Tenor Sans", sans-serif;
 	font-size: 1.5em;
+}
+
+label{
+	font-size: .75rem;
+	color: var(--ng-mat-gray-brown);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
 }

@@ -1,17 +1,23 @@
 .form-component-wrapper{
 	width: 500px;
-	max-height: 900px;
-	overflow: scroll;
+}
+
+.recipe-duration{
+	display: flex;
+	flex-flow: row;
 }
 
 @media screen and (max-width: 500px){
 	.form-component-wrapper{
 		max-width: 400px;
-		height: 700px;
 	}
 
 	.add-recipe-text{
 		margin: 0 .25em 0 .25em;
+	}
+
+	.recipe-duration{
+		flex-flow: column;
 	}
 }
 
@@ -29,23 +35,13 @@
 	margin: 0 0 1em 0;
 }
 
-label{
-	font-size: 1.25rem;
-	font-weight: 400;
-}
-
 .recipes-wrapper{
 	display: flex;
 	flex-flow: column;
-	padding: .25em;
+	/* padding: .25em; */
 	border-radius: 5px;
 	margin: .5em 0 .5em 0;
 	/* overflow: hidden; */
-}
-
-.recipe-duration{
-	display: flex;
-	flex-flow: row ;
 }
 
 .duration{
@@ -82,4 +78,9 @@ label{
 	flex-flow: row nowrap;
 	align-items: center;
 	justify-content: flex-start;
+}
+
+.chips-list-wrapper{
+	/* background-color: lightgreen; */
+	width: 100%;
 }

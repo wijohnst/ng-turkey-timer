@@ -14,6 +14,7 @@ import {
   MatNativeDateModule,
   MatIconModule,
   MatTooltipModule,
+  MatChipsModule,
 } from "@angular/material";
 
 import { TtheaderComponent } from "./ttheader/ttheader.component";
@@ -36,6 +37,7 @@ import { MealFormComponent } from "./meal-form/meal-form.component";
     YearAuthorComponent,
   ],
   imports: [
+    MatChipsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
@@ -43,9 +45,9 @@ import { MealFormComponent } from "./meal-form/meal-form.component";
     MatButtonModule,
     MatDatepickerModule,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
     MatNativeDateModule,
-    MatIconModule,
     MatTooltipModule,
   ],
   providers: [],

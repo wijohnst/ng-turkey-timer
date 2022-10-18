@@ -18,17 +18,38 @@
         <input matInput [(ngModel)]="model.serviceTime" />
         <mat-hint>2:30 PM</mat-hint>
       </mat-form-field>
-      <div class="recipes-wrapper" *ngFor="let recipe of model.recipes">
-        <label>Recipe Name</label>
+      <mat-form-field *ngIf="model.recipes.length > 0">
+        <mat-label>Recipes</mat-label>
+        <mat-chip-list aria-lavel="Recipe selection">
+          <mat-chip
+            *ngFor="let recipe of model.recipes; index as i"
+            (removed)="removeRecipe(i)"
+            matChipRemove
+          >
+            {{ recipe.name }}
+            <mat-icon class="click-icon">cancel</mat-icon>
+          </mat-chip>
+        </mat-chip-list>
+      </mat-form-field>
+      <div class="recipes-wrapper" *ngIf="shouldShowRecipeInputs">
+        <h1>Add a Recipe</h1>
         <mat-form-field>
-          <mat-label>Name</mat-label>
-          <input matInput [(ngModel)]="recipe.name" />
+          <mat-label>Recipe Name</mat-label>
+          <input
+            matInput
+            [(ngModel)]="recipeModel.name"
+            placeholder="What's the recipe called?."
+          />
         </mat-form-field>
         <label>Lead Time</label>
         <div class="input-tooltip-wrapper">
-          <mat-form-field class="duration">
-            <mat-label>Hours</mat-label>
-            <input matInput type="number" [(ngModel)]="recipe.leadTime.hours" />
+          <mat-form-field class="duration" floatLabel="never">
+            <input
+              matInput
+              type="number"
+              [(ngModel)]="recipeModel.leadTime.hours"
+              placeholder="How many hours lead?"
+            />
           </mat-form-field>
           <div
             matTooltip="Lead Time includes things like thawing or marinating. These are typically things you will do days or hours before actually cooking your meal."
@@ -39,17 +60,23 @@
         </div>
         <label>Prep Time</label>
         <div class="recipe-duration">
-          <mat-form-field class="duration">
-            <mat-label>Hours</mat-label>
-            <input matInput type="number" [(ngModel)]="recipe.prepTime.hours" />
+          <mat-form-field class="duration" floatLabel="never">
+            <!-- <mat-label>Hours</mat-label> -->
+            <input
+              matInput
+              type="number"
+              [(ngModel)]="recipeModel.prepTime.hours"
+              placeholder="Hours"
+            />
           </mat-form-field>
           <div class="input-tooltip-wrapper">
-            <mat-form-field class="duration">
-              <mat-label>Minutes</mat-label>
+            <mat-form-field class="duration" floatLabel="never">
+              <!-- <mat-label>Minutes</mat-label> -->
               <input
                 matInput
                 type="number"
-                [(ngModel)]="recipe.prepTime.minutes"
+                [(ngModel)]="recipeModel.prepTime.minutes"
+                placeholder="Minutes"
               />
             </mat-form-field>
             <div
@@ -63,7 +90,7 @@
       </div>
     </div>
     <div [ngClass]="['add-recipe-text']">
-      <span *ngIf="model.recipes.length === 0" class="alert-text">
+      <span *ngIf="!shouldShowRecipeInputs" class="alert-text">
         You haven't addeded any recipes. Click "Add Recipe" below to get
         started.
       </span>
@@ -73,8 +100,17 @@
 <div class="add-meal-controls">
   <button
     mat-raised-button
+    (click)="initRecipe()"
+    [ngClass]="['form-button', 'form-item']"
+    *ngIf="!shouldShowRecipeInputs"
+  >
+    Get Started
+  </button>
+  <button
+    mat-raised-button
     (click)="addRecipe()"
     [ngClass]="['form-button', 'form-item']"
+    *ngIf="shouldShowRecipeInputs"
   >
     Add Recipe
   </button>
