@@ -38,7 +38,7 @@
 	bottom: 50%;
 	animation-name: FallingLeaf;
 	animation-duration: 7s;
-	animation-delay: 5s;
+	animation-delay: 2s;
 	animation-iteration-count: infinite;
 }
 

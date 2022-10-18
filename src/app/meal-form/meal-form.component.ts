@@ -3,6 +3,8 @@ import { Component, OnInit } from "@angular/core";
 import { Meal } from "../mealApi/meal";
 import { Recipe } from "../mealApi/recipe";
 
+import { LocalStorageService } from "../local-storage.service";
+
 @Component({
   selector: "app-meal-form",
   templateUrl: "./meal-form.component.html",
@@ -17,7 +19,7 @@ export class MealFormComponent implements OnInit {
   );
   shouldShowRecipeInputs: boolean = false;
 
-  constructor() {}
+  constructor(private localStorageService: LocalStorageService) {}
 
   ngOnInit() {}
 
@@ -28,8 +30,7 @@ export class MealFormComponent implements OnInit {
   }
 
   submitMeal() {
-    // console.log(this.model);
-    console.log("Submitting...");
+    this.localStorageService.saveLocalMeal(this.model);
   }
 
   getEmptyDuration() {
