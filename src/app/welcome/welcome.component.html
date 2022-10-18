@@ -1,7 +1,25 @@
 <div class="welcome-wrapper">
   <app-leaf-wreath-header></app-leaf-wreath-header>
-  <button mat-raised-button class="fade-button" routerLink="/add_meal">
-    Get Started
-  </button>
+  <div class="welcome-controls">
+    <button
+      *ngIf="localMeal === null"
+      mat-raised-button
+      class="fade-button"
+      routerLink="/add_meal"
+    >
+      Get Started
+    </button>
+    <button *ngIf="!!localMeal" mat-raised-button class="fade-button">
+      View Meal
+    </button>
+    <button
+      *ngIf="!!localMeal"
+      mat-raised-button
+      class="fade-button"
+      (click)="handleResetClick()"
+    >
+      Reset Meal
+    </button>
+  </div>
   <app-year-author></app-year-author>
 </div>
