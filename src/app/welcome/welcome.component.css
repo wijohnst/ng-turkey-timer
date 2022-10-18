@@ -11,8 +11,14 @@ button {
 .fade-button {
 	opacity: 0%; 
 	animation-name: FadeIn;
-	animation-duration: 3s;
-	animation-delay: 7s;
+	animation-duration: 2s;
+	animation-delay: 4s;
 	animation-iteration-count: 1; 
 	animation-fill-mode: forwards;
+}
+
+.welcome-controls{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
