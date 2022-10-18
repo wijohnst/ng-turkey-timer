@@ -1,6 +1,4 @@
 .form-component-wrapper{
-	/* display: flex; */
-	/* background-color: lightblue; */
 	width: 500px;
 	max-height: 900px;
 	overflow: scroll;
@@ -11,6 +9,10 @@
 		max-width: 400px;
 		height: 700px;
 	}
+
+	.add-recipe-text{
+		margin: 0 .25em 0 .25em;
+	}
 }
 
 .form-controls-wrapper{
@@ -20,7 +22,6 @@
 .form-group {
 	display: flex;
 	flex-flow: column;
-	/* padding: .25em; */
 	padding: 1em;
 }
 
@@ -28,22 +29,28 @@
 	margin: 0 0 1em 0;
 }
 
+label{
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+
 .recipes-wrapper{
 	display: flex;
 	flex-flow: column;
-	background-color: rgba(0,0,0, .15);
 	padding: .25em;
 	border-radius: 5px;
 	margin: .5em 0 .5em 0;
+	/* overflow: hidden; */
 }
 
 .recipe-duration{
-	/* display: flex; */
-	justify-content: space-around;
+	display: flex;
+	flex-flow: row ;
 }
 
 .duration{
 	margin: 0 0 0 .25em;
+	flex-grow: 1;
 }
 
 .form-button{
@@ -52,14 +59,27 @@
 }
 
 .add-meal-controls{
-
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .add-recipe-text{
 	text-align: center;
-	/* display: flex; */
-	/* background-color: lightpink; */
-	/* width: 200px; */
-	/* min-width: 100%; */
-	/* font-size: .5rem; */
+}
+
+.alert-text{
+	font-size: 1rem;
+}
+
+.click-icon{
+	cursor: pointer;
+}
+
+.input-tooltip-wrapper{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
 }

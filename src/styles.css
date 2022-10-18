@@ -18,7 +18,8 @@ html, body {
 	--tt-yellow-orange-gradiant: linear-gradient(166.58deg, #E9C46A 2.24%, #F4A261 46.36%, #E76F51 97.92%);
 	--tt-teal-yellow-gradiant: linear-gradient(166.58deg, #2A9D8F 2.24%, #E9C46A 97.92%);
 	--tt-red-blue-gradiant: linear-gradient(178.99deg, #264653 -6.02%, #E76F51 72.45%);
-
+	--tt-gray-white-gradiant: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0) 100%);
+	
 	--tt-text-shadow: 0px 4px 4px rgba(0,0,0,.25);
 }
 
@@ -61,6 +62,7 @@ h1 {
 	letter-spacing: .02em;
 	text-shadow: var(--tt-text-shadow);
 	color: white;
+	text-align: center;
 }
 
 h2 {

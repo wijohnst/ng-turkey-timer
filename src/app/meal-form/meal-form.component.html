@@ -19,34 +19,51 @@
         <mat-hint>2:30 PM</mat-hint>
       </mat-form-field>
       <div class="recipes-wrapper" *ngFor="let recipe of model.recipes">
+        <label>Recipe Name</label>
         <mat-form-field>
-          <mat-label>Recipe Name</mat-label>
+          <mat-label>Name</mat-label>
           <input matInput [(ngModel)]="recipe.name" />
         </mat-form-field>
         <label>Lead Time</label>
-        <mat-form-field class="duration">
-          <mat-label>Hours</mat-label>
-          <input matInput type="number" [(ngModel)]="recipe.leadTime.hours" />
-        </mat-form-field>
+        <div class="input-tooltip-wrapper">
+          <mat-form-field class="duration">
+            <mat-label>Hours</mat-label>
+            <input matInput type="number" [(ngModel)]="recipe.leadTime.hours" />
+          </mat-form-field>
+          <div
+            matTooltip="Lead Time includes things like thawing or marinating. These are typically things you will do days or hours before actually cooking your meal."
+            matTooltipPosition="left"
+          >
+            <mat-icon matSuffix class="click-icon">help</mat-icon>
+          </div>
+        </div>
         <label>Prep Time</label>
         <div class="recipe-duration">
           <mat-form-field class="duration">
             <mat-label>Hours</mat-label>
             <input matInput type="number" [(ngModel)]="recipe.prepTime.hours" />
           </mat-form-field>
-          <mat-form-field class="duration">
-            <mat-label>Minutes</mat-label>
-            <input
-              matInput
-              type="number"
-              [(ngModel)]="recipe.prepTime.minutes"
-            />
-          </mat-form-field>
+          <div class="input-tooltip-wrapper">
+            <mat-form-field class="duration">
+              <mat-label>Minutes</mat-label>
+              <input
+                matInput
+                type="number"
+                [(ngModel)]="recipe.prepTime.minutes"
+              />
+            </mat-form-field>
+            <div
+              matTooltip="Prep time is the total prep time for your recipe. Total prep time includes time to prepare ingredients and any cook time, excluding any time included as Lead Time."
+              matTooltipPosition="left"
+            >
+              <mat-icon matSuffix class="click-icon">help</mat-icon>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div [ngClass]="['add-recipe-text']">
-      <span *ngIf="model.recipes.length === 0">
+      <span *ngIf="model.recipes.length === 0" class="alert-text">
         You haven't addeded any recipes. Click "Add Recipe" below to get
         started.
       </span>

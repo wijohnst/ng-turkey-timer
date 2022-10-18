@@ -12,6 +12,8 @@ import {
   MatInputModule,
   MatDatepickerModule,
   MatNativeDateModule,
+  MatIconModule,
+  MatTooltipModule,
 } from "@angular/material";
 
 import { TtheaderComponent } from "./ttheader/ttheader.component";
@@ -43,6 +45,8 @@ import { MealFormComponent } from "./meal-form/meal-form.component";
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
+    MatIconModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
