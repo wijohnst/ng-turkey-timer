@@ -1,0 +1,29 @@
+.number-leaf-wrapper{
+	/* background-color: lightpink; */
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	transform: rotate(-90deg);
+}
+
+.leaf-wrapper{
+	/* background-color: lightblue; */
+}
+
+.number-wrapper{
+	position: relative;
+	top: -3px;
+	right: 50%;
+	/* background-color: lightgreen; */
+	text-align: center;
+	transform: rotate(-90deg);
+	z-index: 99;
+}
+
+.number{
+	font-family: "Roboto", sans-serif;
+	font-weight: 900;
+	font-size: 4em;
+	color: white;
+}
