@@ -16,7 +16,6 @@ export class WelcomeComponent implements OnInit {
   hasBeenReset: boolean = false;
 
   ngOnInit() {
-    console.log(this.localStorageService.getLocalMeal());
     this.localMeal = this.localStorageService.getLocalMeal();
   }
 

@@ -1,0 +1,25 @@
+.timer-segment-wrapper{
+	display: flex;
+	flex-direction: column;
+}
+
+.leaves{
+	display: flex;
+}
+
+.leaf-one{
+	position: relative;
+	left: 6px;
+}
+
+.leaf-two{
+	position: relative;
+	right: 6px;
+}
+
+.duration-wrapper{
+	text-align: center;
+	z-index: 99;
+	font-family: "Tenor Sans", sans-serif;;
+	text-shadow: var(--tt-text-shadow);
+}
