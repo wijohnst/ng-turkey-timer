@@ -1,0 +1,21 @@
+<div class="timer-segment-wrapper">
+  <div class="leaves">
+    <div class="leaf-one">
+      <app-number-leaf
+        value="{{ values[0] }}"
+        numberSize="{{ leafConfig.numberSize }}"
+        dynamicWrapperSize="{{ leafConfig.dynamicWrapperSize }}"
+      ></app-number-leaf>
+    </div>
+    <div class="leaf-two">
+      <app-number-leaf
+        value="{{ values[1] }}"
+        numberSize="{{ leafConfig.numberSize }}"
+        dynamicWrapperSize="{{ leafConfig.dynamicWrapperSize }}"
+      ></app-number-leaf>
+    </div>
+  </div>
+  <div class="duration-wrapper" [ngStyle]="{ 'font-size': durationStringSize }">
+    {{ durationString }}
+  </div>
+</div>
