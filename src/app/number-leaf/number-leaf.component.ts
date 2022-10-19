@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 import { LeafTypes } from "../leaf/leaf.component";
 
@@ -9,6 +9,10 @@ import { LeafTypes } from "../leaf/leaf.component";
 })
 export class NumberLeafComponent implements OnInit {
   constructor() {}
+
+  @Input() value: number;
+  @Input() numberSize: string = "4em";
+  @Input() dynamicWrapperSize = "200px";
 
   randomLeafType: string;
 
