@@ -4,6 +4,7 @@ import { Meal } from "../mealApi/meal";
 import { Recipe } from "../mealApi/recipe";
 
 import { LocalStorageService } from "../local-storage.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-meal-form",
@@ -19,7 +20,10 @@ export class MealFormComponent implements OnInit {
   );
   shouldShowRecipeInputs: boolean = false;
 
-  constructor(private localStorageService: LocalStorageService) {}
+  constructor(
+    private localStorageService: LocalStorageService,
+    private router: Router
+  ) {}
 
   ngOnInit() {}
 
@@ -31,6 +35,7 @@ export class MealFormComponent implements OnInit {
 
   submitMeal() {
     this.localStorageService.saveLocalMeal(this.model);
+    this.router.navigateByUrl("/track_meal");
   }
 
   getEmptyDuration() {

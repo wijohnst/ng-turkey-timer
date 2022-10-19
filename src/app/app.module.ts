@@ -25,6 +25,7 @@ import { YearAuthorComponent } from "./year-author/year-author.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { MealFormComponent } from "./meal-form/meal-form.component";
 import { TrackMealComponent } from './track-meal/track-meal.component';
+import { NumberLeafComponent } from './number-leaf/number-leaf.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { TrackMealComponent } from './track-meal/track-meal.component';
     WelcomeComponent,
     YearAuthorComponent,
     TrackMealComponent,
+    NumberLeafComponent,
   ],
   imports: [
     MatChipsModule,

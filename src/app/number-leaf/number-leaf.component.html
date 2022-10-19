@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="leaf-wrapper">
+    <app-leaf
+      leafType="{{ randomLeafType }}"
+      dynamicWrapperSize="{{ dynamicWrapperSize }}"
+    ></app-leaf>
+    <div class="number" [ngStyle]="{ 'font-size': numberSize }">
+      {{ value }}
+    </div>
+  </div>
+</div>
