@@ -24,6 +24,7 @@ import { LeafWreathHeaderComponent } from "./leaf-wreath-header/leaf-wreath-head
 import { YearAuthorComponent } from "./year-author/year-author.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { MealFormComponent } from "./meal-form/meal-form.component";
+import { TrackMealComponent } from './track-meal/track-meal.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MealFormComponent } from "./meal-form/meal-form.component";
     TtheaderComponent,
     WelcomeComponent,
     YearAuthorComponent,
+    TrackMealComponent,
   ],
   imports: [
     MatChipsModule,
