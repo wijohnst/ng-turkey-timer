@@ -14,9 +14,13 @@ export class TrackMealComponent implements OnInit {
   data: Duration = this.timerService.getTimeToService();
 
   ngOnInit() {
-    this.timerService
+    this.timeValue = this.timerService
       .getTimerValues()
       .subscribe((timeToService: Duration) => (this.data = timeToService));
+  }
+
+  ngOnDestroy() {
+    this.timeValue.unsubscribe();
   }
 
   splitDigit(number: number): number[] | void {

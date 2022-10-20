@@ -1,7 +1,7 @@
 <div class="track-meal-wrapper">
-  <app-timer-segment></app-timer-segment>
-  <span>{{ data.months }} months</span>
-  <span>{{ data.days }} days</span>
-  <span>{{ data.hours }} hours</span>
-  <span>{{ data.minutes | percent }} minutes</span>
+  <app-timer-segment
+    values="{{ data.months | numToArray }}"
+    durationString="months"
+  ></app-timer-segment>
+  <span class="timer-colon">:</span>
 </div>
