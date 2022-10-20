@@ -29,7 +29,7 @@ export class TimerService {
   }
 
   getTimerValues(): Observable<Duration> {
-    const timeValues = interval(60000);
+    const timeValues = interval(1000);
     return timeValues.pipe(map((integer) => this.getTimeToService()));
   }
 }

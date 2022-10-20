@@ -27,6 +27,7 @@ import { MealFormComponent } from "./meal-form/meal-form.component";
 import { TrackMealComponent } from './track-meal/track-meal.component';
 import { NumberLeafComponent } from './number-leaf/number-leaf.component';
 import { TimerSegmentComponent } from './timer-segment/timer-segment.component';
+import { NumToArrayPipe } from './num-to-array.pipe';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { TimerSegmentComponent } from './timer-segment/timer-segment.component';
     TrackMealComponent,
     NumberLeafComponent,
     TimerSegmentComponent,
+    NumToArrayPipe,
   ],
   imports: [
     MatChipsModule,
