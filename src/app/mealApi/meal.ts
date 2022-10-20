@@ -1,4 +1,4 @@
-import { Duration } from "date-fns";
+import { Duration, format } from "date-fns";
 
 import { Recipe } from "./mealTypes";
 
@@ -14,5 +14,11 @@ export class Meal {
 
   addRecipe(recipe: Recipe) {
     this.recipes.push(recipe);
+  }
+
+  getCompleteServiceDate(): Date {
+    const formattedServiceTime = format(this.serviceDate, "MM/dd/yyyy");
+    const dateString = `${formattedServiceTime} ${this.serviceTime}`;
+    return new Date(dateString);
   }
 }
