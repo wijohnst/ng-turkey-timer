@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { Observable, Subscription } from "rxjs";
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Subscription } from "rxjs";
 import { TimerService } from "../timer.service";
 
 @Component({
@@ -7,23 +7,23 @@ import { TimerService } from "../timer.service";
   templateUrl: "./track-meal.component.html",
   styleUrls: ["./track-meal.component.css"],
 })
-export class TrackMealComponent implements OnInit {
+export class TrackMealComponent implements OnInit, OnDestroy {
   constructor(private timerService: TimerService) {}
 
-  timeValue: Subscription;
-  data: Duration = this.timerService.getTimeToService();
+  timeToServiceSubscription: Subscription;
+  timeToService: Duration = this.timerService.getTimeToService();
 
   ngOnInit() {
-    this.timeValue = this.timerService
+    this.timeToServiceSubscription = this.timerService
       .getTimerValues()
-      .subscribe((timeToService: Duration) => (this.data = timeToService));
+      .subscribe(
+        (timeToService: Duration) => (this.timeToService = timeToService)
+      );
   }
 
   ngOnDestroy() {
-    this.timeValue.unsubscribe();
-  }
-
-  splitDigit(number: number): number[] | void {
-    console.log(number);
+    if (this.timeToServiceSubscription) {
+      this.timeToServiceSubscription.unsubscribe();
+    }
   }
 }
