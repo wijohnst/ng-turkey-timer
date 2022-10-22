@@ -1,4 +1,10 @@
-import { Component, OnInit, Input } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from "@angular/core";
 
 type ValuesTuple = [number, number];
 
@@ -8,7 +14,7 @@ enum DurationStrings {
   MINUTES = "mins",
 }
 
-type LeafConfig = {
+export type LeafConfig = {
   numberSize: string;
   dynamicWrapperSize: string;
 };
@@ -18,7 +24,7 @@ type LeafConfig = {
   templateUrl: "./timer-segment.component.html",
   styleUrls: ["./timer-segment.component.css"],
 })
-export class TimerSegmentComponent implements OnInit {
+export class TimerSegmentComponent implements OnInit, OnChanges {
   constructor() {}
 
   @Input() values: ValuesTuple = [0, 0];
@@ -27,7 +33,24 @@ export class TimerSegmentComponent implements OnInit {
     numberSize: "2rem",
     dynamicWrapperSize: "200px",
   };
-  @Input() durationStringSize: string = "2rem";
+  @Input() durationStringSize: string = "1rem";
 
-  ngOnInit() {}
+  durationStringStyle = {
+    "font-size": this.durationStringSize,
+  };
+
+  localLeafConfig;
+
+  ngOnInit() {
+    this.durationStringStyle["font-size"] = this.durationStringSize;
+    this.localLeafConfig = this.leafConfig;
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+    this.durationStringStyle["font-size"] =
+      changes.durationStringSize.currentValue;
+
+    this.localLeafConfig = { ...changes.leafConfig.currentValue };
+  }
 }

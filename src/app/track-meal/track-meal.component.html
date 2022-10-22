@@ -2,6 +2,8 @@
   <app-timer-segment
     values="{{ timeToService.months | numToArray }}"
     durationString="months"
+    [leafConfig]="leafConfig"
+    durationStringSize="{{ durationStringSize }}"
   ></app-timer-segment>
   <span class="timer-colon">:</span>
 </div>
