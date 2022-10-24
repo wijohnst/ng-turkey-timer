@@ -14,7 +14,6 @@ export class NumToArrayPipe implements PipeTransform {
       return `0${value}`;
     }
 
-    console.log("Double digits...");
     return String(value);
   }
 }
