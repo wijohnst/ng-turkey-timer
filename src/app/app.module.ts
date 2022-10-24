@@ -29,6 +29,8 @@ import { NumberLeafComponent } from './number-leaf/number-leaf.component';
 import { TimerSegmentComponent } from './timer-segment/timer-segment.component';
 import { NumToArrayPipe } from './num-to-array.pipe';
 import { LeafTimerComponent } from './leaf-timer/leaf-timer.component';
+import { PrepBoardComponent } from './prep-board/prep-board.component';
+import { PrepCardComponent } from './prep-card/prep-card.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { LeafTimerComponent } from './leaf-timer/leaf-timer.component';
     TimerSegmentComponent,
     NumToArrayPipe,
     LeafTimerComponent,
+    PrepBoardComponent,
+    PrepCardComponent,
   ],
   imports: [
     MatChipsModule,
