@@ -82,3 +82,11 @@ label{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 }
+
+
+@media screen and (max-width: 600px){
+
+	h1 {
+		font-size: 1.5em;
+	}
+}
