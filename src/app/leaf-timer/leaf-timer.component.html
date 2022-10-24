@@ -1,1 +1,5 @@
-<p>leaf-timer works!</p>
+<div class="leaf-timer-wrapper">
+  <div class="alert-wrapper" *ngIf="!isLessThanOneMonth">
+    <span class="alert-span">{{ moreThanOneMonthText }}</span>
+  </div>
+</div>
