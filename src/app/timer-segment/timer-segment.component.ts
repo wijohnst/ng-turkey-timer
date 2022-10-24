@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, SimpleChanges } from "@angular/core";
 
 type ValuesTuple = [number, number];
 
@@ -8,7 +8,7 @@ enum DurationStrings {
   MINUTES = "mins",
 }
 
-type LeafConfig = {
+export type LeafConfig = {
   numberSize: string;
   dynamicWrapperSize: string;
 };
@@ -23,11 +23,6 @@ export class TimerSegmentComponent implements OnInit {
 
   @Input() values: ValuesTuple = [0, 0];
   @Input() durationString: DurationStrings = DurationStrings.DAYS;
-  @Input() leafConfig: LeafConfig = {
-    numberSize: "2rem",
-    dynamicWrapperSize: "200px",
-  };
-  @Input() durationStringSize: string = "2rem";
 
   ngOnInit() {}
 }

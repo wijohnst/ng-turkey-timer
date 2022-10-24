@@ -28,6 +28,7 @@ import { TrackMealComponent } from './track-meal/track-meal.component';
 import { NumberLeafComponent } from './number-leaf/number-leaf.component';
 import { TimerSegmentComponent } from './timer-segment/timer-segment.component';
 import { NumToArrayPipe } from './num-to-array.pipe';
+import { LeafTimerComponent } from './leaf-timer/leaf-timer.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { NumToArrayPipe } from './num-to-array.pipe';
     NumberLeafComponent,
     TimerSegmentComponent,
     NumToArrayPipe,
+    LeafTimerComponent,
   ],
   imports: [
     MatChipsModule,

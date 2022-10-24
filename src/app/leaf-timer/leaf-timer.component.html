@@ -1,0 +1,25 @@
+<div class="leaf-timer-wrapper">
+  <div class="alert-wrapper" *ngIf="!isLessThanOneMonth">
+    <span class="alert-span">{{ moreThanOneMonthText }}</span>
+  </div>
+  <div class="timer-wrapper" *ngIf="isLessThanOneMonth">
+    <app-timer-segment
+      values="{{ timeToService.days | numToArray }}"
+      durationString="days"
+    ></app-timer-segment>
+    <div class="colon-wrapper">
+      <span class="colon">:</span>
+    </div>
+    <app-timer-segment
+      values="{{ timeToService.hours | numToArray }}"
+      durationString="hours"
+    ></app-timer-segment>
+    <div class="colon-wrapper">
+      <span class="colon">:</span>
+    </div>
+    <app-timer-segment
+      values="{{ timeToService.minutes | numToArray }}"
+      durationString="minutes"
+    ></app-timer-segment>
+  </div>
+</div>

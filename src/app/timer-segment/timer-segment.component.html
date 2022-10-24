@@ -1,21 +1,8 @@
-<div class="timer-segment-wrapper">
-  <div class="leaves">
-    <div class="leaf-one">
-      <app-number-leaf
-        value="{{ values[0] }}"
-        numberSize="{{ leafConfig.numberSize }}"
-        dynamicWrapperSize="{{ leafConfig.dynamicWrapperSize }}"
-      ></app-number-leaf>
-    </div>
-    <div class="leaf-two">
-      <app-number-leaf
-        value="{{ values[1] }}"
-        numberSize="{{ leafConfig.numberSize }}"
-        dynamicWrapperSize="{{ leafConfig.dynamicWrapperSize }}"
-      ></app-number-leaf>
-    </div>
-  </div>
-  <div class="duration-wrapper" [ngStyle]="{ 'font-size': durationStringSize }">
-    {{ durationString }}
-  </div>
+<div class="leaves">
+  <!-- Because .leave is rotated 90 degrees, the values need to be flipped accordingly, so the second digit technically comes first here -->
+  <app-number-leaf value="{{ values[1] }}"></app-number-leaf>
+  <app-number-leaf value="{{ values[0] }}"></app-number-leaf>
+</div>
+<div class="duration-wrapper">
+  {{ durationString }}
 </div>
