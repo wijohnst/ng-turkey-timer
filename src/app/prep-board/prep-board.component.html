@@ -1,1 +1,36 @@
-<p>prep-board works!</p>
+<div class="prep-board-wrapper">
+  <div class="prep-board-section">
+    <h1>Now</h1>
+    <div class="prep-board-row">
+      <app-prep-card
+        *ngFor="let prepListEntry of prepList?.current"
+        cardText="{{ prepListEntry.prepCardText }}"
+        [type]="prepCardTypes.CURRENT"
+        tooltipText="Start Time:"
+      >
+      </app-prep-card>
+    </div>
+  </div>
+  <div class="prep-board-section">
+    <h1>Up Next</h1>
+    <div class="prep-board-row">
+      <app-prep-card
+        *ngFor="let prepListEntry of prepList?.upcoming"
+        cardText="{{ prepListEntry.prepCardText }}"
+        [type]="prepCardTypes.UPCOMING"
+        tooltipText="Start Time: "
+      ></app-prep-card>
+    </div>
+  </div>
+  <div class="prep-board-section">
+    <h1>Working</h1>
+    <div class="prep-board-row">
+      <app-prep-card
+        *ngFor="let prepListEntry of prepList?.completed"
+        cardText="{{ prepListEntry.prepCardText }}"
+        [type]="prepCardTypes.COMPLETED"
+        tooltipText="Start Time: T-"
+      ></app-prep-card>
+    </div>
+  </div>
+</div>

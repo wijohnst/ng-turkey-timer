@@ -1,1 +1,12 @@
-<p>prep-card works!</p>
+<div
+  [ngClass]="{
+    completed: type === prepCardEnum.COMPLETED,
+    current: type === prepCardEnum.CURRENT,
+    upcoming: type === prepCardEnum.UPCOMING,
+    'prep-card-wrapper': true
+  }"
+  matTooltip="{{ tooltipText }}"
+  matTooltipPosition="below"
+>
+  {{ cardText }}
+</div>
