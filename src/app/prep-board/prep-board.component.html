@@ -6,7 +6,9 @@
         *ngFor="let prepListEntry of prepList?.current"
         cardText="{{ prepListEntry.prepCardText }}"
         [type]="prepCardTypes.CURRENT"
-        tooltipText="Start Time:"
+        tooltipText="Start Time: {{
+          prepListEntry.duration | durationToString
+        }}"
       >
       </app-prep-card>
     </div>
@@ -18,7 +20,9 @@
         *ngFor="let prepListEntry of prepList?.upcoming"
         cardText="{{ prepListEntry.prepCardText }}"
         [type]="prepCardTypes.UPCOMING"
-        tooltipText="Start Time: "
+        tooltipText="Start Time: {{
+          prepListEntry.duration | durationToString
+        }}"
       ></app-prep-card>
     </div>
   </div>
@@ -29,7 +33,9 @@
         *ngFor="let prepListEntry of prepList?.completed"
         cardText="{{ prepListEntry.prepCardText }}"
         [type]="prepCardTypes.COMPLETED"
-        tooltipText="Start Time: T-"
+        tooltipText="Start Time: {{
+          prepListEntry.duration | durationToString
+        }}"
       ></app-prep-card>
     </div>
   </div>
