@@ -1,0 +1,31 @@
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+}
+
+.prep-board-wrapper{
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+	width: 600px;
+}
+
+.prep-board-section{
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+	margin: 0 0 1em 0;
+}
+
+.prep-board-row{
+	display: flex;
+	flex-flow: row wrap;
+	gap: 5px;
+}
+
+@media screen and (max-width: 600px){
+
+	.prep-board-wrapper{
+		width: 350px;
+	}
+}

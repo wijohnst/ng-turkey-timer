@@ -1,3 +1,7 @@
+export type PrepListEntry = {
+  prepCardText: string;
+  duration: Duration;
+};
 export class Recipe {
   name: string;
   leadTime: Duration;
@@ -13,5 +17,28 @@ export class Recipe {
     this.name = "";
     this.leadTime = {};
     this.prepTime = {};
+  }
+
+  public getPrepListEntries(): PrepListEntry[] {
+    // If there is no lead time...
+    if (Object.keys(this.leadTime).length === 0) {
+      return [
+        {
+          prepCardText: `${this.name} Prep`,
+          duration: this.prepTime,
+        },
+      ];
+    } else {
+      return [
+        {
+          prepCardText: `${this.name} Prep`,
+          duration: this.prepTime,
+        },
+        {
+          prepCardText: `${this.name} Lead`,
+          duration: this.leadTime,
+        },
+      ];
+    }
   }
 }
