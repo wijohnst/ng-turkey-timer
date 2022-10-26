@@ -32,6 +32,7 @@ import { LeafTimerComponent } from './leaf-timer/leaf-timer.component';
 import { PrepBoardComponent } from './prep-board/prep-board.component';
 import { PrepCardComponent } from './prep-card/prep-card.component';
 import { DurationToStringPipe } from './duration-to-string.pipe';
+import { TimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { DurationToStringPipe } from './duration-to-string.pipe';
     PrepBoardComponent,
     PrepCardComponent,
     DurationToStringPipe,
+    TimelineComponent,
   ],
   imports: [
     MatChipsModule,
