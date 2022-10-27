@@ -1,17 +1,34 @@
 .recipe-path-wrapper{
-	min-width: 20px;
-	min-height: 2px;
-	background-color: lightgreen;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.recipe-path{
+	width: 10px;
+	background-color: var(--tt-teal);
+	background: var(--tt-blue-teal-box-gradian);
+	height: 100%;
+	border-radius: 5px;
+	box-shadow: var(--tt-text-shadow);
+	position: absolute;
+	top: 0;
+	z-index: 0;
 }
 
 .recipe-path-badge{
-	height: 75px;
-	width: 75px;
 	position: sticky;
 	top: 0;
+	z-index: 99;
+
 	margin: .25rem auto;
+	padding: 5px;
 	clip-path: circle(50% at 50% 50%);
-	background-color: lightpink;
+	background-color: var(--tt-red);
+	color: var(--tt-white);
+	font-weight: 700;
 
 	display: flex;
 	align-items: center;

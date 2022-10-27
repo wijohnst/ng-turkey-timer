@@ -1,7 +1,11 @@
 <div class="track-meal-wrapper">
   <h1>Time 'till Turkey</h1>
   <app-leaf-timer></app-leaf-timer>
-  <h1>Prep List</h1>
-  <app-prep-board></app-prep-board>
-  <app-timeline></app-timeline>
+  <div class="prep-list-wrapper" *ngIf="isPrepList">
+    <h1>Prep List</h1>
+    <app-prep-board></app-prep-board>
+  </div>
+  <div class="timeline-wrapper" *ngIf="!isPrepList">
+    <app-timeline></app-timeline>
+  </div>
 </div>

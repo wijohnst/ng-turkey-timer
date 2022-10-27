@@ -1,0 +1,37 @@
+.timeline-header{
+}
+.timeline-wrapper{
+}
+
+.timeline-background{
+	display: grid;
+	grid-template-rows: auto;
+	height: 500px;
+}
+
+.timeline-background > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: solid thin rgba(255,255,255, .25);
+}
+
+.timeline-background-text {
+	font-family: var(--tt-cursive-font-family);
+	color: var(--tt-white);
+	opacity: 35%;
+}
+
+.timeline-foreground{
+	height: 500px;
+	position: relative;
+	top: -500px;
+
+	display: grid;
+	gap: 2px;
+	grid-template-rows: repeat(20, 1fr);
+	grid-template-columns: repeat(20, 1fr);
+}
+
+.path-wrapper{
+}

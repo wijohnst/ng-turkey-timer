@@ -1,1 +1,17 @@
-<h1>Timeline</h1>
+<h1 class="timeline-header">Timeline</h1>
+<div class="timeline-wrapper">
+  <div class="timeline-background">
+    <div *ngFor="let timelineRow of timelineRows">
+      <span class="timeline-background-text">{{ timelineRow.spanText }}</span>
+    </div>
+  </div>
+  <div class="timeline-foreground">
+    <div
+      class="path-wrapper"
+      *ngFor="let recipePath of recipePaths"
+      [ngStyle]="{ 'grid-area': recipePath.gridArea }"
+    >
+      <app-recipe-path pathText="{{ recipePath.pathText }}"></app-recipe-path>
+    </div>
+  </div>
+</div>

@@ -11,3 +11,12 @@
 	font-size: 2rem;
 	font-weight: 900;
 }
+
+.timeline-wrapper{
+	min-width: 100%;
+	height: 400px;
+	overflow: scroll;
+}
+
+@media screen and (max-width: 600px){
+}
