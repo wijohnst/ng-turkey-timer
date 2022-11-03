@@ -12,11 +12,14 @@
 	font-weight: 900;
 }
 
-.timeline-wrapper{
-	min-width: 100%;
+.timeline{
+	width: 600px;
 	height: 400px;
-	overflow: scroll;
+	overflow: hidden;
 }
 
 @media screen and (max-width: 600px){
+	.timeline{
+		height: 600px;
+	}
 }

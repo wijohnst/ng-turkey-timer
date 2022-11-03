@@ -5,7 +5,7 @@
       <span class="timeline-background-text">{{ timelineRow.spanText }}</span>
     </div>
   </div>
-  <div class="timeline-foreground">
+  <div class="timeline-foreground" [ngStyle]="foregroundStyle">
     <div
       class="path-wrapper"
       *ngFor="let recipePath of recipePaths"

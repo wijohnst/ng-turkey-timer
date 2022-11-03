@@ -9,8 +9,8 @@ export class Recipe {
 
   constructor(name: string, leadTime: Duration, prepTime: Duration) {
     this.name = name;
-    this.leadTime = leadTime;
     this.prepTime = prepTime;
+    this.leadTime = leadTime;
   }
 
   initRecipe() {
@@ -31,12 +31,12 @@ export class Recipe {
     } else {
       return [
         {
-          prepCardText: `${this.name} Prep`,
-          duration: this.prepTime,
-        },
-        {
           prepCardText: `${this.name} Lead`,
           duration: this.leadTime,
+        },
+        {
+          prepCardText: `${this.name} Prep`,
+          duration: this.prepTime,
         },
       ];
     }
