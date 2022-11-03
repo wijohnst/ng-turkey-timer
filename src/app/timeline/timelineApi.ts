@@ -1,3 +1,5 @@
+import { PrepListEntry } from "../mealApi/recipe";
+
 export interface TimelineRow {
   spanText: string;
 }
@@ -5,6 +7,7 @@ export interface TimelineRow {
 export interface RecipePath {
   pathText: string;
   gridArea: string;
+  prepListEntry: PrepListEntry;
 }
 
 export type BackgroundRow = {

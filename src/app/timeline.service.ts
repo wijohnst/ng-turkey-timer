@@ -93,6 +93,7 @@ export class TimelineService {
       .map((prepListEntry: PrepListEntry, index: number) => ({
         pathText: this.getPathTextFromRecipeName(prepListEntry),
         gridArea: this.getGridArea(prepListEntry, index),
+        prepListEntry: prepListEntry,
       }));
   }
 
@@ -100,6 +101,7 @@ export class TimelineService {
     const { duration } = prepListEntry;
     const numberOfRows = this.getTimelineRows().length;
     const foregroundRows = numberOfRows * 2;
+    const hasHours = !!duration.hours;
 
     // Adjusts duration to include half hours as part of the `hours` value
     const getTotalHours = (duration: Duration): number => {
@@ -127,7 +129,7 @@ export class TimelineService {
     }
 
     return this.getGridAreaString([
-      foregroundRows - totalHours * 2, // Row Start
+      hasHours ? foregroundRows - totalHours * 2 : foregroundRows - 3, // Row Start
       prepListIndex + 1, // Column Start
       foregroundRows, // Row End, aka: T-00:00:00
       prepListIndex + 1, // Column End
