@@ -7,9 +7,14 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class RecipePathComponent implements OnInit {
   @Input() pathText: string;
-  @Input() gridArea: string;
+  @Input() tooltipText: string;
+  @Input() tMinusString: string;
+
+  combinedTooltipText: string;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.combinedTooltipText = `${this.tooltipText} ${this.tMinusString}`;
+  }
 }

@@ -11,7 +11,11 @@
       *ngFor="let recipePath of recipePaths"
       [ngStyle]="{ 'grid-area': recipePath.gridArea }"
     >
-      <app-recipe-path pathText="{{ recipePath.pathText }}"></app-recipe-path>
+      <app-recipe-path
+        pathText="{{ recipePath.pathText }}"
+        tooltipText="{{ recipePath.prepListEntry.prepCardText }}"
+        tMinusString="{{ recipePath.prepListEntry.tMinusString }}"
+      ></app-recipe-path>
     </div>
   </div>
 </div>

@@ -1,4 +1,10 @@
 <div class="recipe-path-wrapper">
-  <div class="recipe-path-badge">{{ pathText }}</div>
+  <div
+    class="recipe-path-badge"
+    matTooltip="{{ combinedTooltipText }}"
+    matTooltipPosition="left"
+  >
+    {{ pathText }}
+  </div>
   <div class="recipe-path"></div>
 </div>
