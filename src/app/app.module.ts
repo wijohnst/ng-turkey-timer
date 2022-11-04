@@ -34,6 +34,7 @@ import { PrepCardComponent } from "./prep-card/prep-card.component";
 import { DurationToStringPipe } from "./duration-to-string.pipe";
 import { TimelineComponent } from "./timeline/timeline.component";
 import { RecipePathComponent } from "./recipe-path/recipe-path.component";
+import { ViewTrackerDotComponent } from './view-tracker-dot/view-tracker-dot.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { RecipePathComponent } from "./recipe-path/recipe-path.component";
     DurationToStringPipe,
     TimelineComponent,
     RecipePathComponent,
+    ViewTrackerDotComponent,
   ],
   imports: [
     MatChipsModule,
