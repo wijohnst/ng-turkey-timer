@@ -17,6 +17,10 @@
 	overflow: hidden;
 }
 
+.view-controls{
+	display: flex;
+}
+
 @media screen and (max-width: 600px){
 	.timeline{
 		height: 600px;
