@@ -1,6 +1,9 @@
 .timeline-wrapper{
-	height: 400px;
-	overflow: scroll;
+	max-height: 600px;
+	overflow-y: scroll;
+	padding: 0 .25em 0 .25em;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
 }
 
 .timeline-background{
@@ -18,8 +21,19 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-top: solid thin rgba(255,255,255, .25);
 	height: 30px;
+	scroll-snap-align: start;
+	scroll-snap-stop: normal;
+
+	background-image: linear-gradient(to right, rgba(255,255,255, .5) 33%, rgba(255,255,255,0) 0%);
+	background-position: bottom;
+	background-size: 10px 1px;
+	background-repeat: repeat-x;
+}
+
+.timeline-background > div:last-child{
+	scroll-snap-align: end;
+	scroll-snap-stop: always;
 }
 
 .timeline-background-text {

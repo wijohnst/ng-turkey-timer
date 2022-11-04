@@ -87,6 +87,10 @@ label{
 	font-weight: 400;
 }
 
+.mat-tooltip{
+	font-size: .5rem;
+}
+
 
 @media screen and (max-width: 600px){
 

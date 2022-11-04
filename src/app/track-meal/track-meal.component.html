@@ -8,4 +8,8 @@
   <section class="timeline" *ngIf="!isPrepList">
     <app-timeline></app-timeline>
   </section>
+  <section class="view-controls">
+    <app-view-tracker-dot [isActive]="true"></app-view-tracker-dot>
+    <app-view-tracker-dot [isActive]="false"></app-view-tracker-dot>
+  </section>
 </div>
