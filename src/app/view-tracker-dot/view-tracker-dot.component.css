@@ -1,0 +1,21 @@
+.view-tracker-dot-wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 50px;
+	width: 50px;
+}
+
+.dot{
+	height: 15px;
+	width: 15px;
+	clip-path: circle(50% at 50% 50%);
+	background-color: var(--tt-yellow);
+	opacity: 25%;
+}
+
+.active{
+	opacity: 100%;
+}
+

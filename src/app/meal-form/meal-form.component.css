@@ -69,10 +69,6 @@
 	font-size: 1rem;
 }
 
-.click-icon{
-	cursor: pointer;
-}
-
 .input-tooltip-wrapper{
 	display: flex;
 	flex-flow: row nowrap;
@@ -81,6 +77,5 @@
 }
 
 .chips-list-wrapper{
-	/* background-color: lightgreen; */
 	width: 100%;
 }

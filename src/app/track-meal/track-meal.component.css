@@ -3,7 +3,6 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	/* backgrod-color: pink; */
 }
 
 .timer-colon {
@@ -18,8 +17,13 @@
 	overflow: hidden;
 }
 
+.view-controls{
+	display: flex;
+}
+
 @media screen and (max-width: 600px){
 	.timeline{
 		height: 600px;
+		width: 100%;
 	}
 }
