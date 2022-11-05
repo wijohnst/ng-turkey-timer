@@ -12,7 +12,7 @@ enum ViewNames {
 export class TrackMealComponent implements OnInit {
   constructor() {}
 
-  viewName: ViewNames = ViewNames.TIMELINE;
+  viewName: ViewNames = ViewNames.PREPLIST;
 
   ngOnInit() {}
 

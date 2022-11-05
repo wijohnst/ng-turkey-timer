@@ -35,6 +35,7 @@ import { DurationToStringPipe } from "./duration-to-string.pipe";
 import { TimelineComponent } from "./timeline/timeline.component";
 import { RecipePathComponent } from "./recipe-path/recipe-path.component";
 import { ViewTrackerDotComponent } from './view-tracker-dot/view-tracker-dot.component';
+import { ViewNavComponent } from './view-nav/view-nav.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { ViewTrackerDotComponent } from './view-tracker-dot/view-tracker-dot.com
     TimelineComponent,
     RecipePathComponent,
     ViewTrackerDotComponent,
+    ViewNavComponent,
   ],
   imports: [
     MatChipsModule,
