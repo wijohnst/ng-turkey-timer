@@ -1,0 +1,34 @@
+.leaf-timer-wrapper{
+}
+
+.alert-wrapper{
+	text-align: center;
+	padding: 2px;
+}
+
+.alert-span{}
+
+.timer-wrapper{
+	display: flex;
+}
+
+.colon-wrapper{
+	align-self: center;
+	position: relative;
+	bottom: 1rem;
+}
+
+.colon {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 4rem;
+	margin: .5rem;
+}
+
+@media screen and (max-width: 600px){
+
+	.colon{
+		font-weight: 500;
+		font-size: 2rem;
+	}
+}

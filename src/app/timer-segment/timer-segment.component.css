@@ -1,0 +1,26 @@
+.timer-segment-wrapper{
+	flex-direction: column;
+}
+
+.leaves{
+	transform: rotate(90deg);
+}
+
+.duration-wrapper{
+	text-align: center;
+	z-index: 99;
+	font-family: "Tenor Sans", sans-serif;;
+	text-shadow: var(--tt-text-shadow);
+
+	position: relative;
+	bottom: 3.5rem;
+	font-size: 2rem;
+}
+
+@media screen and (max-width: 600px){
+
+	.duration-wrapper{
+		font-size: 1rem;
+		bottom: 1rem;
+	}
+}

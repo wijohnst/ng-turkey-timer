@@ -9,7 +9,12 @@
     >
       Get Started
     </button>
-    <button *ngIf="!!localMeal" mat-raised-button class="fade-button">
+    <button
+      *ngIf="!!localMeal"
+      mat-raised-button
+      class="fade-button"
+      routerLink="/track_meal"
+    >
       View Meal
     </button>
     <button

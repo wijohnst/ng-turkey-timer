@@ -22,6 +22,7 @@ html, body {
 	--tt-orange: #F4A261;
 	--tt-red: #E76F51;
 	--tt-white: #fff;
+	--tt-black: #000;
 
 	--ng-mat-gray-brown: #6F4E2E;
 
@@ -29,8 +30,11 @@ html, body {
 	--tt-teal-yellow-gradiant: linear-gradient(166.58deg, #2A9D8F 2.24%, #E9C46A 97.92%);
 	--tt-red-blue-gradiant: linear-gradient(178.99deg, #264653 -6.02%, #E76F51 72.45%);
 	--tt-gray-white-gradiant: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0) 100%);
+
+	--tt-blue-teal-box-gradian: linear-gradient(180deg, #264653 0%, #2A9D8F 100%);
 	
 	--tt-text-shadow: 0px 4px 4px rgba(0,0,0,.25);
+	--tt-cursive-font-family: "Shrikhand", cursive;
 }
 
 body {
@@ -63,7 +67,7 @@ body {
 }
 
 h1 {
-	font-family: "Shrikhand", cursive;
+	font-family: var(--tt-cursive-font-family);
 	font-size: 2em;
 	letter-spacing: .02em;
 	text-shadow: var(--tt-text-shadow);
@@ -81,4 +85,16 @@ label{
 	color: var(--ng-mat-gray-brown);
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
+}
+
+.mat-tooltip{
+	font-size: .5rem;
+}
+
+
+@media screen and (max-width: 600px){
+
+	h1 {
+		font-size: 1.5em;
+	}
 }

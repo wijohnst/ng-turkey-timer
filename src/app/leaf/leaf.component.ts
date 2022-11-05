@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 
-enum LeafTypes {
+export enum LeafTypes {
   ORANGE = "ORANGE",
   RED = "RED",
   GREEN = "GREEN",
@@ -19,7 +19,6 @@ export class LeafComponent implements OnInit {
 
   imagePath: string = "";
   rotation;
-  wrapperSize;
 
   ngOnInit() {
     this.getImagePath();
@@ -45,8 +44,5 @@ export class LeafComponent implements OnInit {
 
   getDynamicStyle() {
     this.rotation = { transform: `rotate(${this.rotationDegree}deg)` };
-    this.wrapperSize = {
-      width: "40px",
-    };
   }
 }

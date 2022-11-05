@@ -1,0 +1,38 @@
+.prep-card-wrapper {
+	height: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .5em;
+	gap: .25em;
+	border-radius: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 21px;
+	box-shadow: var(--tt-text-shadow);
+}
+
+.completed {
+	background-color: lightpink;
+	background: var(--tt-white) ;
+	opacity: 50%;
+	border: 1px solid var(--tt-orange);
+	text-decoration-line: line-through;
+	color: rgba(0,0,0,.25);
+	box-shadow: none;
+}
+
+.current {
+	background-color: var(--tt-white);
+	border: 1px solid var(--tt-teal);
+}
+
+.upcoming {
+	background-color: var(--tt-white);
+	border: 1px solid var(--tt-orange);
+	opacity: 75%;
+}
+
+@media screen and (max-width: 600px){
+}

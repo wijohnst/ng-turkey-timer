@@ -24,6 +24,18 @@ import { LeafWreathHeaderComponent } from "./leaf-wreath-header/leaf-wreath-head
 import { YearAuthorComponent } from "./year-author/year-author.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { MealFormComponent } from "./meal-form/meal-form.component";
+import { TrackMealComponent } from "./track-meal/track-meal.component";
+import { NumberLeafComponent } from "./number-leaf/number-leaf.component";
+import { TimerSegmentComponent } from "./timer-segment/timer-segment.component";
+import { NumToArrayPipe } from "./num-to-array.pipe";
+import { LeafTimerComponent } from "./leaf-timer/leaf-timer.component";
+import { PrepBoardComponent } from "./prep-board/prep-board.component";
+import { PrepCardComponent } from "./prep-card/prep-card.component";
+import { DurationToStringPipe } from "./duration-to-string.pipe";
+import { TimelineComponent } from "./timeline/timeline.component";
+import { RecipePathComponent } from "./recipe-path/recipe-path.component";
+import { ViewTrackerDotComponent } from './view-tracker-dot/view-tracker-dot.component';
+import { ViewNavComponent } from './view-nav/view-nav.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +47,18 @@ import { MealFormComponent } from "./meal-form/meal-form.component";
     TtheaderComponent,
     WelcomeComponent,
     YearAuthorComponent,
+    TrackMealComponent,
+    NumberLeafComponent,
+    TimerSegmentComponent,
+    NumToArrayPipe,
+    LeafTimerComponent,
+    PrepBoardComponent,
+    PrepCardComponent,
+    DurationToStringPipe,
+    TimelineComponent,
+    RecipePathComponent,
+    ViewTrackerDotComponent,
+    ViewNavComponent,
   ],
   imports: [
     MatChipsModule,

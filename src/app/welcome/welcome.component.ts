@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { LocalStorageService } from "../local-storage.service";
+import { BreakpointObserverService } from "../breakpoint-observer.service";
 
 import { Meal } from "../mealApi/meal";
 
@@ -16,7 +17,6 @@ export class WelcomeComponent implements OnInit {
   hasBeenReset: boolean = false;
 
   ngOnInit() {
-    console.log(this.localStorageService.getLocalMeal());
     this.localMeal = this.localStorageService.getLocalMeal();
   }
 

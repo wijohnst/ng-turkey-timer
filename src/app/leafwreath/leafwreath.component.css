@@ -1,6 +1,10 @@
 .leaf-wreath-wrapper{
 }
 
+.leaf-wrapper{
+	width: 40px;
+}
+
 .wreath-row {
 	display: flex;
 }
@@ -40,5 +44,6 @@
 	animation-duration: 7s;
 	animation-delay: 2s;
 	animation-iteration-count: infinite;
+	width: 40px;
 }
 

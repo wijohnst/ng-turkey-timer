@@ -1,0 +1,25 @@
+<div class="track-meal-wrapper">
+  <h1>Time 'till Turkey</h1>
+  <app-leaf-timer></app-leaf-timer>
+  <section class="prep-list" *ngIf="viewName === 0">
+    <h1>Prep List</h1>
+    <app-prep-board></app-prep-board>
+  </section>
+  <section class="timeline" *ngIf="viewName === 1">
+    <app-timeline></app-timeline>
+  </section>
+  <section class="view-controls">
+    <app-view-nav
+      [buttonDirection]="0"
+      *ngIf="viewName === 1"
+      (click)="toggleView()"
+    ></app-view-nav>
+    <app-view-tracker-dot [isActive]="viewName === 0"></app-view-tracker-dot>
+    <app-view-tracker-dot [isActive]="viewName === 1"></app-view-tracker-dot>
+    <app-view-nav
+      [buttonDirection]="1"
+      *ngIf="viewName === 0"
+      (click)="toggleView()"
+    ></app-view-nav>
+  </section>
+</div>
