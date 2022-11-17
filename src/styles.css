@@ -12,6 +12,7 @@ html, body {
 	overflow: scroll;
 	padding: 0;
 	margin: 0;
+	
 
 	font-family: "Chivo", sans-serif; 
 	font-size: 18pt;
@@ -41,6 +42,7 @@ html, body {
 
 body {
 	min-height: 100vh;
+	overflow-x: hidden;
 }
 
 @keyframes FadeIn {
